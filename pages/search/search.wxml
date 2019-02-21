@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="search">
+    <input class='search-input' focus placeholder="{{ subtitle }}" focus bindchange="handleSearch" />
+  </view>
+  <view class="list">
+    <view class="tips" wx:if="{{ loading }}">
+      <view>
+        <image class='tips-img' src="/images/loading.gif" mode="aspectFill"/>
+        <text>刷新中...</text>
+      </view>
+    </view>
+    <navigator url="../item/item?id={{item.id}}" wx:for="{{list}}" wx:key="item.id">
+      <product item="{{item}}"></product>
+    </navigator>
+    <view class="tips" wx:if="{{list.length>0}}">
+      <view wx:if="{{ hasMore }}">
+        <image class='tips-img' src="/images/loading.gif" mode="aspectFill"/>
+        <text class="text">玩了命的加载中...</text>
+      </view>
+      <view wx:else>
+        <text>没有更多内容了</text>
+      </view>
+    </view>
+  </view>
+</view>

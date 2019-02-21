@@ -1,0 +1,45 @@
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.search .search-input {
+  padding: 20rpx 40rpx;
+  color: #999;
+  font-size: 38rpx;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+
+.list .tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+
+.list .tips .tips-img,
+.list .tips .text {
+  vertical-align: middle;
+}
+
+.list .tips .tips-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}

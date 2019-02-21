@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.slide .swp {
+  height: 400rpx;
+}
+
+.slide .nav-img {
+  height: 400rpx;
+  width: 100%;
+}
+
+.board {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+
+.board-item {
+  display: flex;
+  cursor: pointer;
+  border: 1rpx solid #eee;
+  margin: 40rpx;
+  padding: 40rpx;
+}
+
+.board-item .board-item-title {
+  flex: 1;
+}
+
+.board-item .arrow {
+  height: 40rpx;
+  width: 40rpx;
+} 

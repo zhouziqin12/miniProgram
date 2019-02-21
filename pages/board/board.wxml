@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="slide">
+    <swiper class='swp' indicator-dots="true" autoplay="true" interval="1000" duration="100" circular="true">
+      <swiper-item
+        wx:for="{{banner.content}}"
+        wx:key="{{item.id}}"
+      >
+        <navigator url="../item/item?id={{item.id}}">
+          <image class='nav-img' src="{{item.image}}" mode="aspectFill"/>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <scroll-view class="board" scroll-y="true">
+    <navigator 
+      wx:for="{{list}}"
+      wx:key="{{item.key}}"
+      url="../list/list?key={{item.key}}&title={{item.title}}"
+    >
+      <view class="board-item">
+        <text class="board-item-title">{{item.title}}</text>
+        <image class="arrow" src="../../images/arrowright.png" mode="aspectFill"/>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>
+
